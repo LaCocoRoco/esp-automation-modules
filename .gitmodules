@@ -4,3 +4,6 @@
 [submodule "esp-module-su"]
 	path = esp-module-su
 	url = git@github.com:LaCocoRoco/esp-module-su.git
+[submodule "esp-module-cu"]
+	path = esp-module-cu
+	url = git@github.com:LaCocoRoco/esp-module-cu.git
