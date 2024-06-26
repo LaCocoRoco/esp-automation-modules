@@ -1,6 +1,3 @@
-[submodule "esp-module-cu"]
-	path = esp-module-cu
-	url = git@github.com:LaCocoRoco/esp-module-cu.git
 [submodule "esp-module-ou"]
 	path = esp-module-ou
 	url = git@github.com:LaCocoRoco/esp-module-ou.git
