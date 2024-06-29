@@ -7,25 +7,31 @@
 - [JLCPCB](https://jlcpcb.com/) - Reasonably priced PCB Manufacturer.
 - [LCSC](https://www.lcsc.com/) - Supplier for a wide selection of electronic components.
 
+## How to use
+
+```
+git clone --recursive https://github.com/LaCocoRoco/esp-automation-modules.git
+```
+
 ## Sidenote
 
-Code optimization:
-Due to the long development time, the codebase was consolidated. The effort required for optimization and separation is not proportional to the time needed.
+**Code optimization:**
+Due to the long development time, the codebase was consolidated.The effort required for optimization and separation is not proportional to the time needed.
 
-Power consumption:
+**Power consumption:**
 The power consumption of the individual modules could be optimized. As exmaple it would be possible to use the ULP processor instead of the DeepSleepWakeStub. However, this would require additional tools, complicating the handling. In principle, the hardware could also be revised to reduce power consumption, but the benefits are negligible.
 
-Communication:
+**Communication:**
 To reduce power consumption, the communication between the Master (Control Unit) and the Slave (Operating Unit & Sensor Unit) is unidirectional.
 
-# Control Unit
+## Control Unit
 
 ![function_graphic](https://github.com/LaCocoRoco/esp-module-cu/blob/main/eagle/images/esp-module-cu.png)
 
-# Operating Unit
+## Operating Unit
 
 ![function_graphic](https://github.com/LaCocoRoco/esp-module-ou/blob/main/eagle/images/esp-module-ou.png)
 
-# Sensor Unit
+## Sensor Unit
 
 ![function_graphic](https://github.com/LaCocoRoco/esp-module-su/blob/main/eagle/images/esp-module-su.png)
