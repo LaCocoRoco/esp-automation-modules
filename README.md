@@ -28,12 +28,12 @@ ToDo
 
 ### Control Unit
 
-![function_graphic](https://github.com/LaCocoRoco/esp-module-cu/blob/main/images/esp-module-cu.png)
+![function_graphic](https://github.com/LaCocoRoco/esp-module-cu/blob/main/images/esp-module-cu-pcb.png)
 
 ### Operating Unit
 
-![function_graphic](https://github.com/LaCocoRoco/esp-module-ou/blob/main/images/esp-module-ou.png)
+![function_graphic](https://github.com/LaCocoRoco/esp-module-ou/blob/main/images/esp-module-ou-pcb.png)
 
 ### Sensor Unit
 
-![function_graphic](https://github.com/LaCocoRoco/esp-module-su/blob/main/images/esp-module-su.png)
+![function_graphic](https://github.com/LaCocoRoco/esp-module-su/blob/main/images/esp-module-su-pcb.png)
