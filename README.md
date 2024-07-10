@@ -1,12 +1,10 @@
-# ESP based Automation Modules
+# $\color{red}{\textsf{In Development}}$
 
-ToDo
-
-## Download
+## Quick Guide
 
 > git clone --recursive https://github.com/LaCocoRoco/esp-automation-modules.git
 
-## Notes
+## Sidenotes
 
 - **Code optimization:** Due to the long development time, the codebase was consolidated.The effort required for optimization and separation is not proportional to the time needed.
 
