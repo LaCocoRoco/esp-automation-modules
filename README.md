@@ -1,16 +1,65 @@
-# $\color{red}{\textsf{In Development}}$
+## Module Modes
 
-## Quick Guide
+Modes can be changed by pressing de Mode Button. <br />
+An audio signal will give feedback of the active mode. <br />
+Holding the Mode Button for more then two seconds will clear the module.
 
-> git clone --recursive https://github.com/LaCocoRoco/esp-automation-modules.git
+### Low Power Mode
 
-## Sidenotes
+- Feedback with one audio signal
+- All web functionality is disabled
+- Device will go into deep sleep when inactive
+- Battery lifetime of serveral month
 
-- **Code optimization:** Due to the long development time, the codebase was consolidated.The effort required for optimization and separation is not proportional to the time needed.
+### Hyprid Mode
 
-- **Power consumption:** The power consumption of the individual modules could be optimized. It would be possible to use the ULP processor instead of the DeepSleepWakeStub. However, this would require additional tools and complicating the handling. The hardware could also be revised to reduce power consumption, but the benefits are negligible.
+- Feedback with two audio signals
+- All web functionality is disabled
+- Device will go into deep sleep when battery voltage below 3.8V
+- Battery lifetime of serveral days
 
-- **Communication:** To reduce power consumption, the communication between the Master (Control Unit) and the Slave (Operating Unit & Sensor Unit) is unidirectional.
+### Web Mode
+
+- Feedback with three audio signals
+- All web functionality is enabled
+- Battery lifetime of serveral hours
+
+## $\color{red}{\textsf{Importend}}$
+
+All modules have three different modes: Web Mode, Hybrid Mode and Low Power Mode.<br />
+The Wi-Fi can be configured as either Access Point or Station Mode.<br />
+However, due to the use of the EspNow protocol for communication, there are some restrictions.
+
+### Modules all setup as Access Point (Default):
+
+- All modes work without any restrictions.
+
+### Modules all setup in Station Mode:
+
+- Web Mode works without any restrictions.
+- Low Power Mode and Hybrid Mode only work if the Wi-Fi network is set to a **fixed channel**.
+
+### Modules setup in Access Point or Station Mode:
+
+- All modes only work if the Wi-Fi network is set to **channel 1**.
+
+### Explanation
+
+The main goal of this project was to avoid reliance on any infrastructure. For configuration, neither an application nor an existing Wi-Fi network is necessary. All modules can be accessed via the corresponding SSID in Access Point Mode or via hostname in Station Mode. However, there are some trade-offs:
+
+To reduce power consumption in Low Power Mode, the module does not establish a direct network connection. It only broadcasts data to the specified receiver. In Station Mode, the network may change the Wi-Fi channel occasionally. Connecting to the network to receive this information would significantly increase uptime.
+
+An alternative approach to this problem would be to scan for the receiver and request the channel. However, this has additional drawbacks:
+
+- Scanning for this information takes some time (though less compared to connecting to a Wi-Fi network).
+- It is difficult to distinguish whether a transmission failure is due to the wrong channel or a general network issue.
+- Continuously requesting this information until a response is received would quickly add to the uptime and increase power consumption.
+
+#### Information regards this codebase
+
+Due to the lengthy development process and numerous necessary workarounds, the final codebase feels like a patchwork. Ideally, it should be rewritten from scratch. However, this would require extensive time for redevelopment and retesting. Since there is no significant benefit to doing so, the code will continue to be used in its current form.
+
+##### For future Reference
 
 ## Reference
 
